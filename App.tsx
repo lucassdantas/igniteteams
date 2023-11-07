@@ -1,14 +1,13 @@
-import { StatusBar } from 'react-native';
+import { StatusBar, Text } from 'react-native';
 import { ThemeProvider } from 'styled-components';
-import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
-import { Poppins_400Regular } from '@expo-google-fonts/poppins';
+import { useFonts, Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { Loading } from '@components/Loading';
 
 import theme from './src/theme'
 import {Groups} from '@screens/Groups'
 
 export default function App() {
-  const [fontsLoaded] = useFonts({Roboto_400Regular, Roboto_700Bold, Poppins_400Regular})
+  const [fontsLoaded] = useFonts({Poppins_400Regular, Poppins_700Bold})
 
   return (
     <ThemeProvider theme={theme}>
@@ -17,7 +16,7 @@ export default function App() {
         backgroundColor='transparent'
         translucent
         />
-      { fontsLoaded ? <Groups/> : <Loading/>}
+       { fontsLoaded ? <Groups/> : <Loading/>} 
     </ThemeProvider>
   );
 }

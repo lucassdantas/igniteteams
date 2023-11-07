@@ -1,4 +1,4 @@
-import { Container, Logo, BackIcon, BackButton} from './styles'
+import { Container, Logo, BackButton} from './styles'
 import logoImg from '@assets/logo.png'
 import { Text } from 'react-native';
 
@@ -12,7 +12,7 @@ export function Header({showBackButton = false}:Props) {
         {
             showBackButton &&
             <BackButton>
-                <BackIcon/>
+               {/* <BackIcon/>*/}
             </BackButton>
         }
         <Logo source={logoImg}/>
